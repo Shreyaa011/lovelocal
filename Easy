@@ -1,0 +1,4 @@
+def long_word(s):
+    return len(max(s.split(" "), key = len))
+s =   input()
+print(long_word(s))
