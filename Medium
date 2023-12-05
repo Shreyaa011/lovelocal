@@ -1,0 +1,12 @@
+from collections import Counter
+def med2(lis):
+    a = []
+    newlis = Counter(lis)
+    leng = len(lis) // 3
+    for i, count in newlis.items():  
+        if count > leng:
+            a.append(i)  
+    return a
+
+s = [1,2] #change the list values according to your requirements
+print(med2(s))
