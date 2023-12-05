@@ -1,0 +1,13 @@
+def hard2(s):
+    i = 0
+    for j in range(len(s) - 1, -1, -1):
+        if s[i] == s[j]:
+            i += 1
+    if i == len(s):
+        return s
+    remaining = s[i:]
+    return remaining[::-1] + hard2(s[:i]) + remaining
+
+s = input()
+result = hard2(s)
+print(result)
